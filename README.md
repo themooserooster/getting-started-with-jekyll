@@ -28,7 +28,7 @@ Jekyll depends on a program called Ruby. Ruby is a bit like NodeJs in that it
 it runs programs written in a specific language (Ruby) and has a package manager
 called Gem that can be used to install programs written in Ruby, like Node's Npm
 program. Normally, you'd have to install Ruby yourself, but the good news is that
-Ruby comes pre-installed in every Cloud9 workspace. To install Jekyll
+Ruby comes pre-installed in every Cloud9 workspace. To install Jekyll type this into bash:
 
 ```
 gem install jekyll
@@ -114,7 +114,9 @@ actually viewable to the entire Web right now and here's how to see it.
 for instance I have workspace named "sparkclub" and my c9 handle is "themooserooster"
 so when I serve a Jekyll site in my workspace, I can see it at the address
 
+```
 sparkclub-c9-themooserooster.c9.io
+```
 
 So I would open a new tab, enter that url (no autocomplete here kids, sorry) and I
 should see my blog staring back at me. Go ahead and give it a shot. (Don't forget
