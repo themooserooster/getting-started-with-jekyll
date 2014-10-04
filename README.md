@@ -12,11 +12,14 @@ to deal with all the tedious stuff so you can get to the fun bits. One really gr
 tool for building websites and blogs is called Jekyll. It's a command line tool for
 creating websites that handles all the repetitive stuff for you.
 
-Today, we're going to go over 
+Today, we're going to go over
+
     * Installing Jekyll in your c9 workspace
     * Creating a new website
     * Writing a blog post
     * Hosting it on GitHub for free
+
+Jekyll has _WAY_ more features than we can get into in one sitting, so if you want to explore more on your own, checkout <a href="www.jekyllrb.com">the Jekyll website.</a>
     
 Installation
 ============
@@ -64,7 +67,7 @@ workspace tab. Your bash command line should be at the bottom of your screen.
 Type:
 
 ```
-git clone [hit Ctrl+V to past the SSH URL here]
+git clone [hit Ctrl+V to paste the SSH URL here]
 ```
 
 and then hit Enter. The prompt may give you a gibberish warning, just type "yes"
@@ -82,7 +85,7 @@ complete it for you.
 To fill our repo directory with all the stuff Jekyll needs to do its magic, we type
 
 ```
-jekyll new [whatever your repo directory is] -- force
+jekyll new [whatever your repo directory is] --force
 ```
 
 We need the "--force" switch at the end, because otherwise Jekyll will whine and cry
@@ -117,4 +120,89 @@ So I would open a new tab, enter that url (no autocomplete here kids, sorry) and
 should see my blog staring back at me. Go ahead and give it a shot. (Don't forget
 to navigate into your repo directory before serving.)
 
-You shoul see a boilerplate welcome page.
+You should see a boilerplate welcome page. It's clean and functional, but totally stock
+and boring. Let's start customizing this thing to make it yours.
+
+
+Basic Customization
+===================
+
+Let's take a look at the project Jekyll created for you. Here's the files and folders you should see:
+
+```
+/_includes
+/_layouts
+/_posts
+/_site
+/css
+.gitignore
+_config.yml
+about.md
+feed.xml
+
+```
+
+We're only going to look at 3 parts of our project today:
+
+* _config.yml
+* about.md
+* /_posts
+
+First, lets change some basic configuration of out site to make it our own. Open _config.yml and take a look at it. It should look something like this:
+
+```
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+```
+
+Seems a bit familiar, right?  For instance the "Your awesome title" line was on the front page of your website when you just ran it in Cloud9. When Jekyll builds a website out of all the parts in your project, it looks here to find out what text it should use for the site's title.
+
+* Change the title to somethng new and fun. If you can't think of anything "[your name]'s Super Sweet Hacker Blog" is totally an option.
+* Change the email line to your own email addy
+* Change the description to something interesting. Go nuts, but keep it a one-liner.
+* Change the URL line to "[your GutHub username].github.io"
+* Change Twitter and Github username lines to your own. Don't have a twitter? Congrats, you've got homework.
+
+* Add /_site to .gitignore
+
+* Change About page
+
+* Write an introductory blog post 
+
+Commit Your Changes and Push to GitHub
+======================================
+
+```
+git add .
+git commit -m "Created my new website!"
+git push
+```
+
+Check out your repo page on GitHub (refresh it if its already open). It should show that you just pushed a commit and have the message you entered when you made the commit. Groovy, its up there but that's not really the big thing we want to see, right?
+
+Open a new tab and type in
+
+```
+[your GitHub username].github.io
+``` 
+
+You may not see anything there yet.
+
+Resources
+=========
+
+<a href="www.jekyllrb.com">The Jekyll Website</a>
+
+<a href="https://pages.github.com/">GitHub Pages Website</a>
+
+<a href="http://kramdown.gettalong.org/quickref.html">Kramdown-flavored Markdown Quick Reference</a>
