@@ -99,7 +99,7 @@ Jekyll has given us to work with.
 In bash, navigate to your repo directory and type:
 
 ```
-jekyll serve --host $IP -- port $PORT
+jekyll serve --host $IP --port $PORT
 ```
 
 The "--host" and "--port" switches are needed in our c9 workspaces in order to point
@@ -114,4 +114,7 @@ so when I serve a Jekyll site in my workspace, I can see it at the address
 sparkclub-c9-themooserooster.c9.io
 
 So I would open a new tab, enter that url (no autocomplete here kids, sorry) and I
-should see my blog staring back at me.
+should see my blog staring back at me. Go ahead and give it a shot. (Don't forget
+to navigate into your repo directory before serving.)
+
+You shoul see a boilerplate welcome page.
